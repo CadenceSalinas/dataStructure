@@ -40,8 +40,8 @@ public class queue
         //constructor
         public Node(int data, Node next)
         {
-            this.data = 0;
-            this.link = null;
+            this.data = data;
+            this.link = next;
         }
 
         public void setNextNode(Node node)

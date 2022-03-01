@@ -5,5 +5,8 @@ public class queueDriver {
         newQueue.add(5);
         newQueue.add(6);
         newQueue.showList();
+        newQueue.add(7);
+        newQueue.remove();
+        newQueue.showList();
     }
 }

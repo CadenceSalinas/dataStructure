@@ -11,29 +11,43 @@ public class queue
     //variables
     private Node head;
     private Node tail;
+    private int size;
 
     //constructor
     public queue()
     {
         head = null;
         tail = null;
+        size = 0;
     }
 
     public void add(int newData)
     {
         tail = new Node(newData, tail);
+        head = new Node(newData, head);
     }
 
     public void remove()
     {
-        if(head != null)
+//        if(head != null)
+//        {
+//            tail = tail.getNextNode();
+//            //head = null;
+//        }
+//        else
+//        {
+//            System.out.println("You're deleting from an empty list.");
+//            System.exit(0);
+//        }
+    }
+
+    public void getSize()
+    {
+        Node position = tail;
+        while(position != null)
         {
-            head = head.getNextNode();
-        }
-        else
-        {
-            System.out.println("You're deleting from an empty list.");
-            System.exit(0);
+            //count++;
+            position = position.getNextNode();
         }
     }
 
@@ -42,7 +56,7 @@ public class queue
         Node position = tail;
         while(position != null)
         {
-            System.out.println(position.getData());
+            System.out.print(position.getData() + "");
             position = position.getNextNode();
         }
     }

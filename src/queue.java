@@ -41,14 +41,15 @@ public class queue
 //        }
     }
 
-    public void getSize()
+    public int getSize()
     {
         Node position = tail;
         while(position != null)
         {
-            //count++;
+            size++;
             position = position.getNextNode();
         }
+        return size;
     }
 
     public void showList()

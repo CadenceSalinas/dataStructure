@@ -8,5 +8,6 @@ public class queueDriver {
         newQueue.add(7);
         newQueue.remove();
         newQueue.showList();
+        System.out.println("\nThe list size is: " + newQueue.getSize());
     }
 }

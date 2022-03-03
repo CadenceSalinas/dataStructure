@@ -39,6 +39,13 @@ public class queue
 
     public void getHead()
     {
+        Node position = tail;
+        while(position != null)
+        {
+            head = position;
+            position = position.getNextNode();
+        }
+        //head = tail.getNextNode();
         System.out.println(head.getData());
     }
 

@@ -12,6 +12,6 @@ public class queueDriver {
         System.out.println();
         System.out.println("\nThe list size is: " + newQueue.getSize());
         newQueue.getTail();
-        //newQueue.getHead();
+        newQueue.getHead();
     }
 }

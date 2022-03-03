@@ -57,7 +57,26 @@ public class queue
 
     public void remove()
     {
-//
+
+        if(head != null)
+        {
+            head = null;
+        }
+        else {
+            System.out.println("List is empty.");
+            System.exit(0);
+        }
+
+//        for(int i = 0; i < size-2; i++)
+//        {
+//            head = tail.getNextNode();
+//        }
+//        int temp = tail.getData();
+        for(int i = 0; i < size-1; i++)
+        {
+            tail = tail.getNextNode();
+        }
+//        tail = new Node(temp, tail);
     }
 
     public void showList()

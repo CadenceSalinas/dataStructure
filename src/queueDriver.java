@@ -11,7 +11,16 @@ public class queueDriver {
         newQueue.showList();
         System.out.println();
         System.out.println("\nThe list size is: " + newQueue.getSize());
+        System.out.println("The tail: ");
         newQueue.getTail();
+        System.out.println();
+        System.out.println("The head: ");
+        newQueue.getHead();
+        System.out.println();
+        newQueue.remove();
+        System.out.println("The list: ");
+        newQueue.showList();
+        System.out.println("The head: ");
         newQueue.getHead();
     }
 }

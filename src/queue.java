@@ -23,7 +23,7 @@ public class queue
 
     public void add(int newData)
     {
-        tail = new Node(newData, tail);
+        tail = new Node(newData);
     }
 
     public int getSize()
@@ -58,24 +58,33 @@ public class queue
     public void remove()
     {
 
-        if(head != null)
-        {
-            head = null;
-        }
-        else {
-            System.out.println("List is empty.");
-            System.exit(0);
-        }
+//        Node current = tail;
+//        Node next = tail.next;
+//        while (next.next != null)
+//        {
+//            current = next;
+//            next = next.next;
+//        }
+//        current.next = null;
+//        head = current;
+//        if(head != null)
+//        {
+//            head = null;
+//        }
+//        else {
+//            System.out.println("List is empty.");
+//            System.exit(0);
+//        }
 
 //        for(int i = 0; i < size-2; i++)
 //        {
 //            head = tail.getNextNode();
 //        }
 //        int temp = tail.getData();
-        for(int i = 0; i < size-1; i++)
-        {
-            tail = tail.getLink();
-        }
+//        for(int i = 0; i < size-1; i++)
+//        {
+//            tail = tail.getLink();
+//        }
 //        tail = new Node(temp, tail);
     }
 
@@ -95,16 +104,21 @@ public class queue
         private Node link;
 
         //constructor
-        public Node(int data, Node next)
+        public Node(int data)
         {
             this.data = data;
-            this.link = next;
+            //this.link = next;
         }
 
         public void setNextNode(Node node)
         {
             this.link = node;
         }
+
+//        public Node next(Node node)
+//        {
+//
+//        }
 
         public Node getLink()
         {

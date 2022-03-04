@@ -32,7 +32,7 @@ public class queue
         while(position != null)
         {
             size++;
-            position = position.getNextNode();
+            position = position.getLink();
         }
         return size;
     }
@@ -43,7 +43,7 @@ public class queue
         while(position != null)
         {
             head = position;
-            position = position.getNextNode();
+            position = position.getLink();
         }
         //head = tail.getNextNode();
         System.out.println(head.getData());
@@ -74,7 +74,7 @@ public class queue
 //        int temp = tail.getData();
         for(int i = 0; i < size-1; i++)
         {
-            tail = tail.getNextNode();
+            tail = tail.getLink();
         }
 //        tail = new Node(temp, tail);
     }
@@ -85,7 +85,7 @@ public class queue
         while(position != null)
         {
             System.out.print(position.getData() + " ");
-            position = position.getNextNode();
+            position = position.getLink();
         }
     }
 
@@ -106,7 +106,7 @@ public class queue
             this.link = node;
         }
 
-        public Node getNextNode()
+        public Node getLink()
         {
             return this.link;
         }

@@ -23,7 +23,7 @@ public class queue
 
     public void add(int newData)
     {
-        tail = new Node(newData);
+        tail = new Node(newData, tail);
     }
 
     public int getSize()
@@ -58,34 +58,15 @@ public class queue
     public void remove()
     {
 
-//        Node current = tail;
-//        Node next = tail.next;
-//        while (next.next != null)
-//        {
-//            current = next;
-//            next = next.next;
-//        }
-//        current.next = null;
-//        head = current;
-//        if(head != null)
-//        {
-//            head = null;
-//        }
-//        else {
-//            System.out.println("List is empty.");
-//            System.exit(0);
-//        }
-
-//        for(int i = 0; i < size-2; i++)
-//        {
-//            head = tail.getNextNode();
-//        }
-//        int temp = tail.getData();
-//        for(int i = 0; i < size-1; i++)
-//        {
-//            tail = tail.getLink();
-//        }
-//        tail = new Node(temp, tail);
+        Node current = tail;
+        Node next = tail.next;
+        while (next.next != null)
+        {
+            current = next;
+            next = next.next;
+        }
+        current.next = null;
+        head = current;
     }
 
     public void showList()
@@ -101,28 +82,23 @@ public class queue
     private class Node
     {
         public int data;
-        private Node link;
+        private Node next;
 
         //constructor
-        public Node(int data)
+        public Node(int data, Node next)
         {
             this.data = data;
-            //this.link = next;
+            this.next = next;
         }
 
         public void setNextNode(Node node)
         {
-            this.link = node;
+            this.next = node;
         }
-
-//        public Node next(Node node)
-//        {
-//
-//        }
 
         public Node getLink()
         {
-            return this.link;
+            return this.next;
         }
 
         public int getData()
@@ -134,7 +110,7 @@ public class queue
         public String toString() {
             return "Node{" +
                     "data=" + data +
-                    ", link=" + link +
+                    ", link=" + next +
                     '}';
         }
     }//end node

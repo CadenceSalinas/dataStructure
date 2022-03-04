@@ -45,13 +45,11 @@ public class queue
             head = position;
             position = position.getLink();
         }
-        //head = tail.getNextNode();
         System.out.println(head.getData());
     }
 
     public void getTail()
     {
-        //return tail.getData();
         System.out.println(tail.getData());
     }
 

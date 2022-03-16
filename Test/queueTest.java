@@ -68,4 +68,21 @@ public class queueTest {
         tester1.add(4);
         assertEquals(2, tester1.data(1));
     }
+
+    @Test
+    public void listLength10getData5()
+    {
+        queue tester1 = new queue();
+        tester1.add(1); //9
+        tester1.add(2);
+        tester1.add(4);
+        tester1.add(65);
+        tester1.add(23);
+        tester1.add(76);
+        tester1.add(9);
+        tester1.add(10);
+        tester1.add(6);
+        tester1.add(300); //0
+        assertEquals(23, tester1.data(5));
+    }
 }

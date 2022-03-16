@@ -37,7 +37,7 @@ public class queue
         return size;
     }
 
-    public void getHead()
+    public int getHead()
     {
         Node position = tail;
         while(position != null)
@@ -45,12 +45,22 @@ public class queue
             head = position;
             position = position.getLink();
         }
-        System.out.println(head.getData());
+        return head.getData();
     }
 
-    public void getTail()
+    public int getTail()
     {
-        System.out.println(tail.getData());
+        return tail.getData();
+    }
+
+    public int data(int count)
+    {
+        Node position = tail;
+        for(int i = 0; i < count; i++)
+        {
+            position = position.getLink();
+        }
+        return position.getData();
     }
 
     public void remove()
